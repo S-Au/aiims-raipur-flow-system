@@ -1,0 +1,50 @@
+{
+  "system": "AIIMS Raipur Outpatient Flow Optimization & Queue Management System (AFOS)",
+  "generated_at": "2026-09-30T15:20:00Z",
+  "dataset": {
+    "total_records": 52000,
+    "departments": 32,
+    "features": 25,
+    "date_range": "2025-10-01 to 2025-12-15",
+    "demographics": {
+      "pediatric_pct": 5.4,
+      "senior_pct": 16.3,
+      "abha_linkage_pct": 62.1
+    }
+  },
+  "wait_time_model": {
+    "algorithm": "Quantile HistGradientBoostingRegressor (P10, P50, P90, Mean)",
+    "r2_score": 0.9800,
+    "mae_minutes": 1.49,
+    "rmse_minutes": 1.95,
+    "p80_interval_coverage": 0.9171,
+    "inference_latency_ms": 0.005,
+    "test_sample_size": 10400,
+    "acceptance_criteria": {
+      "r2_ge_0_85": true,
+      "mae_lt_10_mins": true,
+      "latency_lt_10ms": true
+    }
+  },
+  "footfall_forecasting_model": {
+    "algorithm": "Departmental Daily HistGradientBoosting Forecaster",
+    "r2_score": 0.8769,
+    "mae_patients": 5.64,
+    "rmse_patients": 9.24,
+    "inference_latency_ms": 0.018,
+    "test_sample_size": 358,
+    "acceptance_criteria": {
+      "r2_ge_0_80": true,
+      "mae_lt_15_patients": true
+    }
+  },
+  "queue_simulation_benchmark": {
+    "comparison": "Baseline FIFO vs AIIMS SEPT-AP Scheduler",
+    "sample_patients": 300,
+    "tier1_critical_wait_reduction_pct": 25.59,
+    "tier2_urgent_wait_reduction_pct": 75.66,
+    "fifo_tier2_avg_wait_mins": 170.11,
+    "sept_ap_tier2_avg_wait_mins": 41.40,
+    "starvation_prevention": "Guaranteed via linear alpha aging rate = 2.5 pts/min"
+  }
+}

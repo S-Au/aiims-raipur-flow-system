@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest cache & test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Local utilities & dataset generation scripts (internal / hidden from public repo)
+data/generate_dataset.py
+package_and_verify.py
+
+# Environments & dependencies
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# Editor & OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

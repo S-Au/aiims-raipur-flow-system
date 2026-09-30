@@ -1,0 +1,13 @@
+{
+  "r2_score": 0.9803,
+  "mae_minutes": 1.49,
+  "rmse_minutes": 1.94,
+  "p80_interval_coverage": 0.9171,
+  "inference_latency_ms": 0.005,
+  "test_sample_size": 10400,
+  "criteria_satisfied": {
+    "r2_ge_0_85": true,
+    "mae_lt_10_mins": true,
+    "latency_lt_10ms": true
+  }
+}

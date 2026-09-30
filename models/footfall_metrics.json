@@ -1,0 +1,11 @@
+{
+  "r2_score": 0.8769,
+  "mae_patients": 5.64,
+  "rmse_patients": 9.24,
+  "inference_latency_ms": 0.024,
+  "test_sample_size": 358,
+  "criteria_satisfied": {
+    "r2_ge_0_80": true,
+    "mae_lt_15_patients": true
+  }
+}
